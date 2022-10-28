@@ -21,13 +21,17 @@ app.get('/', (req, resp) => {
     //set the status code
     resp.status (200)
     //send the response
-    resp.send(`<h1> The current time is ${new Date()}</h1>`)
+    resp.send(`<h1> The current time is ${new Date()}</h1><img src = "/static/chair2.jpeg">`)
 
 
 })
+
+//serve static resource
+app.use("/static", express.static(__dirname + "/static"))
 
 //Start our web application
 app.listen(port, () => {console.info(`Starting application on port ${port} at ${new Date()}`)})
 //need backtick instead of single or double quote for string to work in javascript
 console.info(`port = ${port}`)     
 // console.info(`port = ${process.env.PORT}`)     
+
