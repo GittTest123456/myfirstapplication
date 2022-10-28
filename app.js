@@ -30,4 +30,4 @@ app.get('/', (req, resp) => {
 app.listen(port, () => {console.info(`Starting application on port ${port} at ${new Date()}`)})
 //need backtick instead of single or double quote for string to work in javascript
 console.info(`port = ${port}`)     
-console.info(`port = ${process.env.PORT}`)     
+// console.info(`port = ${process.env.PORT}`)     
